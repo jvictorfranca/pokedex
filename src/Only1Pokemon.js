@@ -2,7 +2,7 @@ import React from 'react'
 import './App.css';
 import Pokemon from './Pokemon'
 import Button from './Button';
-import pokemons from './data';
+
 
 class Only1Pokemon extends React.Component {
   constructor(props){
@@ -31,8 +31,7 @@ class Only1Pokemon extends React.Component {
      const {pokemons} = this.props;
      console.log(pokemons)
      const {filter} = this.state;
-     console.log(filter)
-     console.log(pokemons.filter((pokemon)=>pokemon.type === filter))
+     
      return(
  
        filter === 'all' ? pokemons : pokemons.filter((pokemon)=>pokemon.type === filter)
